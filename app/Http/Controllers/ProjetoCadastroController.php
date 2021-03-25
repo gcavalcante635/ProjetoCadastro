@@ -18,6 +18,18 @@ class ProjetoCadastroController extends Controller
         $valor3 = $request->valor3;
         $valor4 = $request->valor4;
 
-        return view('resultadoSoma', compact('valor1', 'valor2', 'resultado'));
+        return view('welcome', compact('valor1', 'valor2', 'resultado'));
+    }
+    public function welcome()
+    {
+        return view('welcome');
+    }
+    public function resultadoCadastro()
+    {
+        return view('resultadoCadastro');
+    }
+    public function carregarLista()
+    {
+        return view('listaCadastrado');
     }
 }

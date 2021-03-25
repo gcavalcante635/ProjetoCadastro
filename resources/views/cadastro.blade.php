@@ -41,7 +41,11 @@
          <label for="quartoValor" class="form-label"><h1>Matricula</h1></label>
          <input type="number" class="form-control" id="quartoValor" name="valor4">
         </div>
-       
+        <div class="row">
+
+            <a  href="{{ route('cadastrado') }}" class="btn btn-primary"><h1>Salvar</h1></a>
+            </div>
+        </div>
        </form>
       </div>
       </div>
