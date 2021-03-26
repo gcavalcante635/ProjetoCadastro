@@ -22,9 +22,7 @@
     <center> <h1>Menu</h1> <center>
     </div>
 
-<div class="row">
-<form method="POST" action="{{ route('cadastrar') }}">
-       @csrf
+
     <div class="row mt-3">
             <div class="row">
 

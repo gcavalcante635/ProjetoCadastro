@@ -13,11 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get ('/', 'App\Http\Controllers\ProjetoCadastroController@welcome')->name('welcome');
+Route::get ('/', 'App\Http\Controllers\CadastroController@welcome')->name('welcome');
 
-Route::get ('/cadastro', 'App\Http\Controllers\ProjetoCadastroController@cadastro')->name('carregarCadastro');
-Route::post ('/efetuar-cadastro', 'App\Http\Controllers\ProjetoCadastroController@efeturarCadastro')->name('cadastrar');
-Route::get ('/resultado-cadastro', 'App\Http\Controllers\ProjetoCadastroController@resultadoCadastro')->name('cadastrado');
+Route::get ('/cadastro', 'App\Http\Controllers\CadastroController@cadastro')->name('carregarCadastro');
+Route::post ('/resultado-cadastro', 'App\Http\Controllers\CadastroController@resultadoCadastro')->name('cadastrado');
 
-Route::get ('/carregar-lista', 'App\Http\Controllers\ProjetoCadastroController@carregarlista')->name('listaCadastros');
+Route::get ('/carregar-lista', 'App\Http\Controllers\CadastroController@carregarlista')->name('listaCadastros');
+
+
 

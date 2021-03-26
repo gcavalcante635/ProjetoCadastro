@@ -14,12 +14,13 @@
         font-family: 'Blinker', sans-serif;
     }
     </style>
+
 </head>
 <body>
 <table class="table">
   <thead>
     <tr>
-      <th scope="col">#</th>
+      <th scope="col">ID</th>
       <th scope="col">Nome Completo</th>
       <th scope="col">Data de Nascimento</th>
       <th scope="col">Senha</th>
@@ -27,26 +28,15 @@
     </tr>
   </thead>
   <tbody>
+  @foreach ($usuario as $usuario)
     <tr>
-      <th scope="row">1</th>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <th scope="row">{{$usuario->id}}</th>
+      <td>{{$usuario->nome}}</td>
+      <td>{{$usuario->data_nascimento}}</td>
+      <td>{{$usuario->senha}}</td>
+      <td>{{$usuario->matricula}}</td>
     </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td colspan="2"></td>
-      <td></td>
-      <td></td>
-    </tr>
+    @endforeach
   </tbody>
 </table>
 </body>

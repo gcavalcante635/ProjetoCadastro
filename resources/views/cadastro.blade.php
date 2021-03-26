@@ -23,28 +23,26 @@
     </div>
 
     <div class="row">
-      <form method="POST" action="{{ route('carregarCadastro') }}">
+      <form method="POST" action="{{ route('cadastrado') }}">
        @csrf
         <div class="mb-3">
-         <label for="primeiroValor" class="form-label"><h1>Nome Completo</h1></label>
-         <input type="text" class="form-control" id="primeiroValor" name="valor1">
+         <label for="nomecompleto" class="form-label"><h1>Nome Completo</h1></label>
+         <input type="text" class="form-control" id="nomecompleto" name="nome">
         </div>
         <div class="mb-3">
-         <label for="segundoValor" class="form-label"><h1>Data de Nascimento</h1></label>
-         <input type="date" class="form-control" id="segundoValor" name="valor2">
+         <label for="datadenascimento" class="form-label"><h1>Data de Nascimento</h1></label>
+         <input type="date" class="form-control" id="datadenascimento" name="data_nascimento">
         </div>
         <div class="mb-3">
-         <label for="terceiroValor" class="form-label"><h1>Senha</h1></label>
-         <input type="password" class="form-control" id="terceiroValor" name="valor3">
+         <label for="senha" class="form-label"><h1>Senha</h1></label>
+         <input type="password" class="form-control" id="senha" name="senha">
         </div>
         <div class="mb-3">
-         <label for="quartoValor" class="form-label"><h1>Matricula</h1></label>
-         <input type="number" class="form-control" id="quartoValor" name="valor4">
+         <label for="matricula" class="form-label"><h1>Matricula</h1></label>
+         <input type="number" class="form-control" id="matricula" name="matricula">
         </div>
         <div class="row">
-
-            <a  href="{{ route('cadastrado') }}" class="btn btn-primary"><h1>Salvar</h1></a>
-            </div>
+          <button type="submit" class="btn btn-primary">Salvar</button>
         </div>
        </form>
       </div>
