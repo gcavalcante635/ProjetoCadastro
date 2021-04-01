@@ -17,8 +17,10 @@ Route::get ('/', 'App\Http\Controllers\CadastroController@welcome')->name('welco
 
 Route::get ('/cadastro', 'App\Http\Controllers\CadastroController@cadastro')->name('carregarCadastro');
 Route::post ('/resultado-cadastro', 'App\Http\Controllers\CadastroController@resultadoCadastro')->name('cadastrado');
+Route::post ('/resultado-edicao', 'App\Http\Controllers\CadastroController@salvarEdicao')->name('resultadoEdicao');
 
 Route::get ('/carregar-lista', 'App\Http\Controllers\CadastroController@carregarlista')->name('listaCadastros');
-
+Route::get ('/usuario/editar/{id}', 'App\Http\Controllers\CadastroController@editarUsuario')->name('editarUsuario');
+Route::get ('/excluir/{id}', 'App\Http\Controllers\CadastroController@excluirUsuario')->name('excluir');
 
 
