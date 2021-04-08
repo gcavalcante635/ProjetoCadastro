@@ -29,8 +29,8 @@ class EnderecoController extends Controller
 
     public function listaEndereco()
     {
-        $endereco = Endereco::all();
-        return view('endereco.listaEnderecos', compact('endereco'));
+        $enderecos = Endereco::all();
+        return view('endereco.listaEnderecos', compact('enderecos'));
     }
 
     public function editarEndereco($id)

@@ -31,3 +31,9 @@ Route::post ('/edicao-endereco', 'App\Http\Controllers\EnderecoController@edicao
 Route::get ('/lista-endereco', 'App\Http\Controllers\EnderecoController@listaEndereco')->name('listaEndereco');
 Route::get ('/endereco/editar/{id}', 'App\Http\Controllers\EnderecoController@editarEndereco')->name('editarEndereco');
 Route::get ('/excluir-endereco/{id}', 'App\Http\Controllers\EnderecoController@excluirEndereco')->name('excluirEndereco');
+
+// Route de cadastro de Usuarios com endereço
+Route::prefix('usuario')->group(function (){
+    Route::get('create', 'App\Http\Controllers\NovoController@create')->name('createUsuario');
+    Route::post('save', 'App\Http\Controllers\NovoController@save')->name('saveUsuario');
+});
